@@ -1,0 +1,4 @@
+C:\Users\riftwalker\Desktop\4 sem\NAI3\NAI3\obj\Debug\net9.0\NAI3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\riftwalker\Desktop\4 sem\NAI3\NAI3\obj\Debug\net9.0\NAI3.AssemblyInfoInputs.cache
+C:\Users\riftwalker\Desktop\4 sem\NAI3\NAI3\obj\Debug\net9.0\NAI3.AssemblyInfo.cs
+C:\Users\riftwalker\Desktop\4 sem\NAI3\NAI3\obj\Debug\net9.0\NAI3.csproj.CoreCompileInputs.cache
