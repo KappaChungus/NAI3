@@ -1,7 +1,7 @@
 ﻿
 namespace NAI3
 {
-    public class Form1 : Form
+    public sealed class Form1 : Form
     {
         public static Form1? Instance { get; set; }
         public Button ChoseTrainDataDirButton { get; }
@@ -22,12 +22,12 @@ namespace NAI3
             panel.Controls.Add(ChoseTestFileButton);
             
             Controls.Add(panel);
-            Text = "Simple GUI";
-            Size = new System.Drawing.Size(300, 300);
+            Text = "language guesser";
             StartPosition = FormStartPosition.CenterScreen;
             
         }
         
+
         [STAThread]
         static void Main()
         {
