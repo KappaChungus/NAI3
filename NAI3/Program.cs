@@ -26,7 +26,6 @@ namespace NAI3
             StartPosition = FormStartPosition.CenterScreen;
             
         }
-        
 
         [STAThread]
         static void Main()

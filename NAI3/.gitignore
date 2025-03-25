@@ -1,0 +1,51 @@
+# Rider
+.idea/
+.idea/*
+
+# User-specific files
+.idea/.idea.*
+.idea/.name
+.idea/*.iml
+.idea/workspace.xml
+.idea/.idea.vcs.xml
+.idea/.idea_workspace.xml
+
+# User-specific configuration files
+.idea/encodings.xml
+.idea/libraries/
+.idea/runConfigurations/
+
+# Rider-specific build output
+.idea/out/
+.idea/.idea.iml
+
+# ReSharper files
+.idea/.ReSharper/
+
+# JetBrains Rider
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ASP.NET Core Build Output
+bin/
+obj/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Windows Installer files
+Thumbs.db
+ehthumbs.db
+
+# User-specific files
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# VSCode settings folder
+.vscode/
