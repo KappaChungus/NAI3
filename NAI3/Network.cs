@@ -7,15 +7,14 @@ public class Network
     private const int AlphabetSize = 26;
     private const int NoGenerations = 50;
 
-    private List<Perceptron>? _perceptrons;
-    private Dictionary<string, int>? _languageToInt;
-    private List<string>? _languageFromInt;
+    private readonly List<Perceptron>? _perceptrons;
+    private readonly List<string>? _languageFromInt;
     private List<KeyValuePair<List<double>,int>>? _trainData;
     
     public Network(String path)
     {
         _trainData = [];
-        _languageToInt = [];
+        Dictionary<string, int> languageToInt = [];
         _languageFromInt= [];
         _perceptrons = [];
         var random = new Random();
@@ -24,12 +23,12 @@ public class Network
             List<double> initVector = [];
             for (int i = 0; i < AlphabetSize; i++) initVector.Add(random.NextDouble());
             string directoryName = Path.GetFileName(languageDirectory);
-            _languageToInt.Add(directoryName, _languageToInt.Count);
+            languageToInt.Add(directoryName, languageToInt.Count);
             _languageFromInt.Add(directoryName);
             _perceptrons!.Add(new Perceptron(Alpha,Theta,initVector));
             var df = new DataFilter();
             foreach (var file in Directory.GetFiles(languageDirectory))
-                _trainData.Add(new KeyValuePair<List<double>, int>(df.FilterData(file),_languageToInt[directoryName]));
+                _trainData.Add(new KeyValuePair<List<double>, int>(df.FilterData(file),languageToInt[directoryName]));
         }
     }
 

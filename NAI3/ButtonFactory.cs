@@ -23,7 +23,7 @@ public class ButtonFactory
         tb.Size = new Size(305, 160);
         tb.Font = new Font("Arial", 10, FontStyle.Regular);
         tb.KeyDown += (sender, e) => keyHandler(sender!, e, name);
-        tb.Enter += (sender, e) => tb.Text = "";
+        tb.Enter += (_, _) => tb.Text = "";
         return tb;
     }
     public void ChoseTrainDataDirClick(object sender, EventArgs e, string name)
@@ -38,7 +38,7 @@ public class ButtonFactory
             _network.TrainPerceptrones();
 
             Form1.Instance!.ChoseTestFileButton.Enabled = true;
-            Form1.Instance!.textBox.Enabled = true;
+            Form1.Instance.TextBox.Enabled = true;
         }
     }
     
@@ -49,7 +49,7 @@ public class ButtonFactory
         if (openFileDialog.ShowDialog() == DialogResult.OK)
         {
             DataFilter df = new DataFilter();
-            string res = _network.TestPerceptrones(df.FilterData(openFileDialog.FileName));
+            string res = _network!.TestPerceptrones(df.FilterData(openFileDialog.FileName));
             MessageBox.Show("Language is: " + res);
         }
     }
@@ -64,7 +64,7 @@ public class ButtonFactory
             ((TextBox)sender).Text = "";
             var df = new DataFilter();
             e.SuppressKeyPress = true;
-            string res = _network.TestPerceptrones(df.FilterData(path));;
+            string res = _network!.TestPerceptrones(df.FilterData(path));
             MessageBox.Show("Language is: " + res);
         }
     }

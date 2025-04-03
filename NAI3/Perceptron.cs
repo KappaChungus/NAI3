@@ -5,9 +5,9 @@ namespace NAI3;
 public class Perceptron
 {
     public bool TrainMode { get; set; }
-    private double _alpha;
+    private readonly double _alpha;
     private double _theta;
-    private List<double> _weights;
+    private readonly List<double> _weights;
 
     public Perceptron(double alpha, double theta, List<Double> weights)
     {
